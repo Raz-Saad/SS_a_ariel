@@ -27,8 +27,10 @@ int factorial(int n)  // assisting function for isStrong
 int isStrong(int num)
 {
     if (num ==0)
+    {
         return 0;
-        
+    }
+    
     int check=0;
     int num1=num;
     int mod;
