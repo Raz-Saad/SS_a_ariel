@@ -1,6 +1,6 @@
 FLAGS= -Wall
 CC = gcc
-all: mains maindloop maindrec
+all: mains maindloop maindrec loops
 loops: libclassloops.a
 recursives: libclassrec.a
 recursived: libclassrec.so
@@ -44,7 +44,7 @@ advancedClassificationLoop.o: advancedClassificationLoop.c NumClass.h
 advancedClassificationRecursion.o: advancedClassificationRecursion.c NumClass.h
 	$(CC) $(FLAGS) -c advancedClassificationRecursion.c
 
-.PHONY: clean all recursives recursived loopd
+.PHONY: clean all recursives recursived loopd loops
 clean:
 	rm -f mains maindloop maindrec *.o *.so *.a
 
